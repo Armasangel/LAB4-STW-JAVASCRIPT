@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disci-App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="stars" id="stars"></div>
+  <div class="grain"></div>
+
+  <header>
+    <div class="header-left">
+      <h1 class="logo"> Disci<span>App</span></h1>
+      <p class="tagline">Forja tu disciplina. Conquista tus hábitos.</p>
+    </div>
+    <div class="xp-panel">
+      <div class="rank-badge" id="rankBadge">
+        <span class="rank-name" id="rankName">Novato</span>
+      </div>
+      <div class="xp-info">
+        <span class="xp-label">XP GLOBAL</span>
+        <span class="xp-value" id="xpDisplay">0</span>
+      </div>
+      <div class="xp-bar-bg">
+        <div class="xp-bar-fill" id="xpBarFill" style="width:0%"></div>
+        <span class="xp-bar-text" id="xpBarText">0 / 100 XP</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2 class="section-title"><span class="rune">✦</span> Crear Nueva Misión</h2>
+      <div class="form-card">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="missionName">Nombre de la misión</label>
+            <input type="text" id="missionName" placeholder="Ej: Meditar 10 minutos" />
+          </div>
+          <div class="form-group">
+            <label for="missionDiff">Dificultad</label>
+            <select id="missionDiff">
+              <option value="Fácil">Fácil — 10 XP</option>
+              <option value="Normal" selected>Normal — 25 XP</option>
+              <option value="Difícil">Difícil — 50 XP</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="missionDesc">Descripción</label>
+          <textarea id="missionDesc" rows="3" placeholder="Describe en qué consiste este hábito..."></textarea>
+        </div>
+        <button class="btn-create" id="btnCreate">⚔️ Registrar Misión</button>
+      </div>
+    </section>
+
+    <section class="missions-section">
+      <h2 class="section-title"><span class="rune"></span> Misiones Activas</h2>
+      <div id="missionList" class="mission-list">
+        <p class="empty-state">Aún no has registrado ninguna misión, ¡comienza tu aventura!</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
