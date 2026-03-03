@@ -170,7 +170,7 @@ function updateXPBar() {
   }
 
   // Actualizar badge de rango
-  rankName.textContent = currentRank.name;
+  rankName.textContent = currentRank.icon + " " + currentRank.name;
 }
 
 //POPUP FLOTANTE DE XP
