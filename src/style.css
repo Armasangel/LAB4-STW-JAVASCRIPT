@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,327 +7,109 @@
 body {
   background: #1a1208;
   color: #d4c4a0;
-  font-family: Georgia, serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   background: #130f07;
-  border-bottom: 2px solid #4a3d22;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  border-bottom: 1px solid #4a3d22;
 }
 
 .logo {
-  font-size: 1.6rem;
-  color: #e8b84b;
+  font-size: 1.3rem;
   font-weight: bold;
-}
-
-.tagline {
-  font-style: italic;
-  font-size: 0.8rem;
-  color: #8a7a5a;
-}
-
-.xp-panel {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.rank-badge {
-  padding: 0.3rem 0.8rem;
-  border: 1px solid #c8922a;
-  background: #241d11;
-  color: #f5d98a;
-  font-size: 0.85rem;
-  border-radius: 3px;
-}
-
-.xp-value {
-  font-size: 1.4rem;
   color: #e8b84b;
-  font-weight: bold;
-}
-
-.xp-label {
-  font-size: 0.6rem;
-  color: #8a7a5a;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.xp-bar-bg {
-  width: 160px;
-  height: 8px;
-  background: #241d11;
-  border: 1px solid #3d3120;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.xp-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #8a6a20, #e8b84b);
-  transition: width 0.5s ease;
 }
 
 main {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
 }
 
 .section-title {
-  font-size: 1rem;
-  color: #f5d98a;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .form-card {
   background: #1c160d;
   border: 1px solid #3d3120;
-  border-radius: 4px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 1rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  margin-bottom: 1rem;
 }
 
 label {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #8a7a5a;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
 }
 
 input, select, textarea {
-  background: #141009;
+  padding: 0.5rem;
   border: 1px solid #3d3120;
-  border-radius: 2px;
-  padding: 0.6rem 0.9rem;
+  background: #141009;
   color: #f0e6c8;
-  font-family: Georgia, serif;
-  font-size: 1rem;
-  outline: none;
-  resize: vertical;
-  transition: border-color 0.2s;
 }
 
-input::placeholder, textarea::placeholder {
-  color: #5a4a2a;
-  font-style: italic;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: #8a6a20;
-}
-
-select {
-  cursor: pointer;
-  appearance: none;
-}
-
-.btn-create {
-  align-self: flex-end;
-  padding: 0.65rem 1.8rem;
+button {
+  padding: 0.5rem 1rem;
   background: #c8922a;
   border: none;
-  border-radius: 2px;
-  color: #0d0b08;
-  font-size: 0.88rem;
-  font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
 }
 
-.btn-create:hover {
+button:hover {
   background: #e8b84b;
-  transform: translateY(-1px);
 }
 
 .mission-list {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
-}
-
-.empty-state {
-  text-align: center;
-  font-style: italic;
-  color: #8a7a5a;
-  padding: 3rem;
-  border: 1px dashed #3d3120;
-  border-radius: 4px;
+  gap: 1rem;
 }
 
 .mission-card {
   background: #1c160d;
   border: 1px solid #3d3120;
-  border-radius: 4px;
-  padding: 1.2rem 1.4rem;
+  padding: 1rem;
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  gap: 1.2rem;
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.2s, transform 0.2s;
-}
-
-.mission-card::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 3px;
-}
-
-.mission-card.easy::before   { background: #27ae60; }
-.mission-card.normal::before { background: #e8b84b; }
-.mission-card.hard::before   { background: #c0392b; }
-
-.mission-card:hover {
-  border-color: #8a6a20;
-  transform: translateY(-1px);
-}
-
-.mission-card.successful {
-  border-color: #27ae60;
-  opacity: 0.75;
-}
-
-.mission-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.mission-header {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
 }
 
 .mission-name {
-  font-size: 1rem;
-  color: #f0e6c8;
   font-weight: bold;
+}
+
+.mission-desc {
+  font-size: 0.9rem;
+  color: #8a7a5a;
 }
 
 .badge {
-  padding: 0.1rem 0.5rem;
-  border-radius: 2px;
-  font-size: 0.62rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: 1px solid currentColor;
-}
-
-.badge-easy   { color: #27ae60; background: #27ae6015; }
-.badge-normal { color: #e8b84b; background: #e8b84b15; }
-.badge-hard   { color: #c0392b; background: #c0392b15; }
-.badge-xp     { color: #e8b84b; background: #e8b84b15; border-color: #8a6a20; }
-
-.badge-status-pending    { color: #8a7a5a; border-color: #3d3120; }
-.badge-status-successful { color: #2ecc71; background: #2ecc7115; border-color: #27ae60; }
-
-.mission-desc {
-  font-style: italic;
-  color: #8a7a5a;
-  font-size: 0.9rem;
-}
-
-.mission-actions {
-  display: flex;
-  align-items: center;
-}
-
-.btn-complete {
-  padding: 0.45rem 1rem;
-  background: transparent;
-  border: 1px solid #27ae60;
-  border-radius: 2px;
-  color: #2ecc71;
-  font-size: 0.75rem;
-  cursor: pointer;
-  transition: background 0.2s;
-  white-space: nowrap;
-}
-
-.btn-complete:hover {
-  background: #27ae6022;
-}
-
-.btn-complete:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #8a6a20;
 }
 
 .toast {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 0.8rem 1.3rem;
+  bottom: 1rem;
+  right: 1rem;
   background: #241d11;
+  padding: 0.5rem 1rem;
   border: 1px solid #8a6a20;
-  border-radius: 4px;
-  color: #f5d98a;
-  font-size: 0.88rem;
-  z-index: 999;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s, transform 0.3s;
-  pointer-events: none;
-  max-width: 300px;
-}
-
-.toast.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.xp-popup {
-  position: fixed;
-  font-size: 1.4rem;
-  color: #e8b84b;
-  font-weight: bold;
-  pointer-events: none;
-  z-index: 998;
-  animation: xpFloat 1.2s ease-out forwards;
-}
-
-@keyframes xpFloat {
-  0%   { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-70px); }
 }
