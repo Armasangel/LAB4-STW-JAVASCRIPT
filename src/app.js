@@ -89,7 +89,7 @@ function completeMission(id) {
   const mission = missions.find(m => m.id === id);
   if (!mission || mission.status === "SUCCESFUL") return;
 
-  mission.status = "SUCCESFUL";
+  mission.status = "SUCCESSFUL";
   globalXP += mission.xp;
 
   console.log(`Misión completada: "${mission.name}" | +${mission.xp} XP | XP Total: ${globalXP}`);
@@ -171,7 +171,6 @@ function updateXPBar() {
 
   // Actualizar badge de rango
   rankName.textContent = currentRank.name;
-  rankBadge.querySelector(".rank-icon").textContent = currentRank.icon;
 }
 
 //POPUP FLOTANTE DE XP
